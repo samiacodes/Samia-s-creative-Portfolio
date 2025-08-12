@@ -1,7 +1,6 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./MagicButton";
 
 const Hero = () => {
@@ -42,44 +41,44 @@ const Hero = () => {
 
       <div className="flex justify-between relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-10">
-  
-        {/* LEFT: Text content */}
-        <div className="flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
-          <p className="uppercase tracking-widest text-xs text-blue-100 max-w-80">
-            Building Scalable Web Solutions with the MERN Stack
-          </p>
-          <TextGenerateEffect
-            words="Turning Code into Creative, Functional User Experiences"
-            className="text-[40px] md:text-4xl lg:text-5xl"
-          />
-          <p className="md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m <span className="text-blue-300 font-semibold">Samia Islam Lamia</span>, a Full Stack Web Developer based in Dhaka, Bangladesh.
- 
-          </p>
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
+          {/* LEFT: Text content */}
+          <div className="flex flex-col items-center lg:items-start justify-center text-center lg:text-left">
+            <p className="uppercase tracking-widest text-xs text-blue-100 max-w-80">
+              Building Scalable Web Solutions with the MERN Stack
+            </p>
+            <h1 className="heading">
+              Turning Code into Creative, Functional{" "}
+              <span className="text-purple">User Experiences</span>
+            </h1>
+
+            <p className="md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+              Hi! I&apos;m{" "}
+              <span className="text-blue-300 font-semibold">
+                Samia Islam Lamia
+              </span>
+              , a Full Stack Web Developer based in Dhaka, Bangladesh.
+            </p>
+            <a href="#about">
+              <MagicButton
+                title="Show my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
+
+          {/* RIGHT: Image */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/profile.png"
+              alt="Adrian"
+              width={350} // same as w-64
+              height={350} // same as h-64
+              className="rounded-full object-cover border-4 border-purple-500 shadow-lg"
+              priority // improves LCP for above-the-fold images
             />
-          </a>
+          </div>
         </div>
-
-        {/* RIGHT: Image */}
-      <div className="flex-shrink-0">
-        <Image
-          src="/images/profile.png"
-          alt="Adrian"
-          width={350} // same as w-64
-          height={350} // same as h-64
-          className="rounded-full object-cover border-4 border-purple-500 shadow-lg"
-          priority // improves LCP for above-the-fold images
-        />
-      </div>
-
-
-        </div>
-
       </div>
     </div>
   );
