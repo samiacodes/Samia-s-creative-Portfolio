@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -15,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Samia Islam Lamia's Creative Portfolio",
-  description: "A minimalist yet bold portfolio built with care — where creativity meets code.",
+  description:
+    "A minimalist yet bold portfolio built with care — where creativity meets code.",
 };
 
 export default function RootLayout({
@@ -28,15 +30,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
-          <ThemeProvider
-            attribute="class"
-            defaultTheme=""
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

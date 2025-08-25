@@ -1,3 +1,4 @@
+"use client";
 import { FaLocationArrow } from "react-icons/fa6";
 import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
@@ -46,7 +47,7 @@ const Hero = () => {
             <p className="uppercase tracking-widest text-xs text-blue-100 max-w-80">
               Building Scalable Web Solutions with the MERN Stack
             </p>
-            <h1 className="heading">
+            <h1 className="font-bold text-4xl md:text-5xl py-6">
               Turning Code into Creative, Functional{" "}
               <span className="text-purple">User Experiences</span>
             </h1>
@@ -58,13 +59,42 @@ const Hero = () => {
               </span>
               , a Full Stack Web Developer based in Dhaka, Bangladesh.
             </p>
-            <a href="#about">
+            {/* <div className="flex flex-col sm:flex-row gap-6 ">
+              <a href="#about">
+                <MagicButton
+                  title="Show my work"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                />
+              </a>
+              <a href="/resume.pdf" download>
+                <MagicButton
+                  title="Download Resume"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                />
+              </a>
+            </div> */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <MagicButton
                 title="Show my work"
                 icon={<FaLocationArrow />}
                 position="right"
+                handleClick={() =>
+                  document
+                    .getElementById("about")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               />
-            </a>
+              <MagicButton
+                title="Download Resume"
+                icon={<FaLocationArrow />}
+                position="right"
+                as="a"
+                href="/resume.pdf"
+                download
+              />
+            </div>
           </div>
 
           {/* RIGHT: Image */}

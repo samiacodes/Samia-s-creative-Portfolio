@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import MiniButton from "./MiniButton";
 
 type ProjectCardProps = {
   title: string;
@@ -82,13 +83,13 @@ export const ProjectCard = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            className="px-4 py-2 rounded-full text-xs font-normal dark:text-white"
           >
             Visit Site →
           </CardItem>
 
           {/* Toggle Description */}
-          <CardItem
+          {/* <CardItem
             translateZ={20}
             as="button"
             onClick={toggleDescription}
@@ -102,7 +103,17 @@ export const ProjectCard = ({
             >
               ▼
             </motion.span>
-          </CardItem>
+          </CardItem> */}
+          <MiniButton onClick={toggleDescription}>
+            {showDescription ? "Show less" : "Read more"}
+            <motion.span
+              animate={{ rotate: showDescription ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+              className="inline-block"
+            >
+              ▼
+            </motion.span>
+          </MiniButton>
         </div>
       </CardBody>
     </CardContainer>

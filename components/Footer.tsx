@@ -1,3 +1,4 @@
+"use client";
 import { FaLocationArrow } from "react-icons/fa6";
 import Image from "next/image";
 import { socialMedia } from "@/data";
@@ -17,20 +18,52 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+          Got something <span className="text-purple">exciting</span> in mind?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          I&apos;d love to hear it. Drop me a message!
         </p>
-        <a href="mailto:emiliyalamia@gmail.com">
+        {/* <a href="mailto:emiliyalamia@gmail.com">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
             position="right"
           />
-        </a>
+        </a> */}
+        <div className="flex flex-col items-center gap-4 mt-6 text-white-200 text-sm text-center">
+          {/* Primary CTA */}
+          <MagicButton
+            title="Let's get in touch"
+            icon={<FaLocationArrow />}
+            position="right"
+            as="a"
+            href="mailto:emiliyalamia@gmail.com"
+          />
+
+          {/* Secondary contact links */}
+          <div className="flex items-center justify-center gap-3">
+            <p>
+              Phone:{" "}
+              <a
+                href="tel:+8801640475800"
+                className="hover:text-purple transition-colors duration-200 underline underline-offset-4"
+              >
+                +880 1640475800
+              </a>
+            </p>
+            <p>
+              WhatsApp:{" "}
+              <a
+                href="https://wa.me/8801640475800"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-purple transition-colors duration-200 underline underline-offset-4"
+              >
+                Message me
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">

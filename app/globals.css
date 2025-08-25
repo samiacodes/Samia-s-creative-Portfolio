@@ -71,7 +71,9 @@
 html, body, #__next{
   height: 100%;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* subtle animations for aurora */
 @keyframes aurora {
   0%{ transform: translateY(0) scale(1) }
