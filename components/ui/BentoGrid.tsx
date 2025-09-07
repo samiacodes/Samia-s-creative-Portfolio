@@ -41,6 +41,12 @@ export const BentoGridItem = ({
         "relative group row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition-all duration-300 dark:border-white/[0.2] dark:bg-black-100",
         className
       )}
+      style={{
+        //    generated the gradient color from here https://cssgradient.io/
+        background: "#090817",
+        backgroundColor:
+          "linear-gradient(169deg,rgba(9, 8, 23, 1) 0%, rgba(232, 231, 248, 1) 35%, rgba(26, 42, 128, 1) 100%)",
+      }}
     >
       {/* Glow effect on hover */}
       <div className="absolute inset-0 z-0 rounded-xl border border-transparent transition-all duration-300 group-hover:border-sky-400 group-hover:shadow-[0_0_25px_4px_rgba(56,189,248,0.4)] pointer-events-none" />
