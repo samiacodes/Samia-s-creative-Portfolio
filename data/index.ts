@@ -5,93 +5,13 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
-// export const gridItems = [
-//   {
-//     id: 1,
-//     title: "Collaboration",
-//     description:
-//       "As a new developer, I always focus on delivering great UI and functionality. I’m ready to learn and apply modern and advanced tech to make user-friendly solutions.",
-//     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-//     imgClassName: "w-full h-full",
-//     titleClassName: "justify-end",
-//     img: "",
-//     spareImg: "",
-//   },
-//   {
-//     id: 2,
-//     title: "Flexibility",
-//     description:
-//       "I’m open to working across different time zones. I actively try to stay updated with advanced tools and techniques because I dream of becoming a top-tier developer.",
-//     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-//     imgClassName: "",
-//     titleClassName: "justify-start",
-//     img: "",
-//     spareImg: "",
-//   },
-//   {
-//     id: 3,
-//     title: "Tech Stack",
-//     description:
-//       "I’ve built projects with React, MongoDB, Firebase, and Tailwind CSS. Right now, I’m learning Next.js and TypeScript — and enjoying every bit of it!",
-//     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-//     imgClassName: "",
-//     titleClassName: "justify-center",
-//     img: "",
-//     spareImg: "",
-//   },
-//   {
-//     id: 4,
-//     title: "My Drive",
-//     description:
-//       "I’m passionate about coding, solving tech problems, and learning new things. Building functional, beautiful apps makes me feel alive and excited.",
-//     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-//     imgClassName: "",
-//     titleClassName: "justify-start",
-//     img: "",
-//     spareImg: "",
-//   },
-//   {
-//     id: 5,
-//     title: "Current Projects",
-//     description:
-//       "I’m currently working on a school management app using Next.js and TypeScript. I feel like I’ve just stepped into the vast tech ocean — and I’m ready to dive deep!",
-//     className: "md:col-span-3 md:row-span-2",
-//     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-//     titleClassName: "justify-center md:justify-start lg:justify-center",
-//     img: "",
-//     spareImg: "",
-//   },
-//   {
-//     id: 6,
-//     title: "Let’s Work Together",
-//     description:
-//       "While I'm still building strong projects before applying for jobs, I'm open to opportunities, collaborations, and exciting ideas. Reach out anytime!",
-//     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-//     imgClassName: "",
-//     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-//     img: "",
-//     spareImg: "",
-//   },
-//   // {
-//   //   id: 7,
-//   //   title: "Samia Islam Lamia",
-//   //   description:
-//   //     " Dhaka, Bangladesh\n emiliyalamia@gmail.com\n linkedin.com/in/samiaislamlamia\n\nAspiring Web Developer | Passionate Learner | Frontend & MERN Stack Enthusiast",
-//   //   className:
-//   //     "md:col-span-6 lg:col-span-5 md:row-span-2 border dark:border-neutral-800 border-neutral-200 p-6 rounded-xl bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-900 dark:to-neutral-800",
-//   //   imgClassName: "",
-//   //   titleClassName: "justify-center text-center",
-//   //   img: "",
-//   //   spareImg: "",
-//   // },
-// ];
 
 export const gridItems = [
   {
     id: 1,
     title: "Who I Am",
     description:
-      "I would describe myself as somewhere between introvert and extrovert. I always try to give my best effort, even when things aren’t perfect. I believe in growth through trying, failing, and improving. Learning something new excites me, and I’m never afraid to explore unfamiliar paths.",
+      "I would describe myself as somewhere between introvert and extrovert. I always try to give my best effort, even when things aren't perfect. I believe in growth through trying, failing, and improving. Learning something new excites me, and I'm never afraid to explore unfamiliar paths.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -102,7 +22,7 @@ export const gridItems = [
     id: 2,
     title: "What I Enjoy",
     description:
-      "I equally enjoy both frontend and backend development. For me, functionality and visual appeal go hand-in-hand. I love creating interfaces that feel alive, with meaningful interactivity. While I haven’t worked in a team yet, I’m genuinely excited to collaborate — I believe teamwork opens doors to greater creativity and learning.",
+      "I equally enjoy both frontend and backend development. For me, functionality and visual appeal go hand-in-hand. I love creating interfaces that feel alive, with meaningful interactivity. While I haven't worked in a team yet, I'm genuinely excited to collaborate — I believe teamwork opens doors to greater creativity and learning.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -113,7 +33,7 @@ export const gridItems = [
     id: 3,
     title: "Beyond Coding",
     description:
-      "Outside of programming, I’m passionate about books, crafting, DIY projects, and embroidery. I love nature, planting trees, and find joy in peaceful moments. These hobbies keep me grounded and bring balance to my everyday life.",
+      "Outside of programming, I'm passionate about books, crafting, DIY projects, and embroidery. I love nature, planting trees, and find joy in peaceful moments. These hobbies keep me grounded and bring balance to my everyday life.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -135,7 +55,7 @@ export const gridItems = [
     id: 5,
     title: "Where I'm Going",
     description:
-      "My goal is to keep growing — not just technically, but personally too. I’m focused on identifying and improving my weak areas so I can become more confident and efficient. I’m targeting to land a job by January 26, and preparing myself to be fully job-ready before then.",
+      "My goal is to keep growing — not just technically, but personally too. I'm focused on identifying and improving my weak areas so I can become more confident and efficient. I'm targeting to land a job by January 26, and preparing myself to be fully job-ready before then.",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -154,17 +74,38 @@ export const gridItems = [
     img: "",
     spareImg: "",
   },
+];
+
+// Tech Skills with proficiency levels
+export const techSkills = [
   {
-    id: 7,
-    title: "Skills",
-    description:
-      " Languages: HTML, CSS, JavaScript\n Libraries: React, Tailwind\n Backend: Node.js, Express, MongoDB, Firebase\n Tools: Git, VS Code, Figma\n Learning: Next.js, TypeScript, Deployment",
-    className:
-      "md:col-span-6 lg:col-span-5 md:row-span-2 border dark:border-neutral-800 border-neutral-200 p-6 rounded-xl text-sm whitespace-pre-wrap",
-    imgClassName: "",
-    titleClassName: "justify-center text-center",
-    img: "",
-    spareImg: "",
+    category: "Frontend",
+    skills: [
+      { name: "HTML5", level: 90, icon: "SiHtml5", color: "#ffffff" },
+      { name: "CSS3", level: 85, icon: "SiCss3", color: "#ffffff" },
+      { name: "JavaScript", level: 80, icon: "SiJavascript", color: "#ffffff" },
+      { name: "React", level: 75, icon: "SiReact", color: "#ffffff" },
+      { name: "Tailwind CSS", level: 85, icon: "SiTailwindcss", color: "#ffffff" },
+      { name: "Next.js", level: 65, icon: "SiNextdotjs", color: "#ffffff" },
+    ],
+  },
+  {
+    category: "Backend",
+    skills: [
+      { name: "Node.js", level: 70, icon: "SiNodedotjs", color: "#ffffff" },
+      { name: "Express", level: 70, icon: "SiExpress", color: "#ffffff" },
+      { name: "MongoDB", level: 75, icon: "SiMongodb", color: "#ffffff" },
+      { name: "Firebase", level: 65, icon: "SiFirebase", color: "#ffffff" },
+    ],
+  },
+  {
+    category: "Tools & Others",
+    skills: [
+      { name: "Git", level: 75, icon: "SiGit", color: "#ffffff" },
+      // { name: "VS Code", level: 90, icon: "", color: "#ffffff" },
+      { name: "Figma", level: 60, icon: "SiFigma", color: "#ffffff" },
+      { name: "TypeScript", level: 55, icon: "SiTypescript", color: "#ffffff" },
+    ],
   },
 ];
 
@@ -309,6 +250,6 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
-    url: "https://linkedin.com/in/samiaislamlamia", 
+    url: "https://linkedin.com/in/samiyalamiya", 
   },
 ];

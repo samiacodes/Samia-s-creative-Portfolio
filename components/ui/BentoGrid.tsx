@@ -25,24 +25,22 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  id,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
-
+  id?: number;
 }) => {
-
- 
   return (
     <div
       className={cn(
-        "relative group row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition-all duration-300 dark:border-white/[0.2] dark:bg-black-100",
+        "relative group row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition-all duration-300 dark:border-white/[0.2] dark:bg-black-100 hover:shadow-xl",
         className
       )}
       style={{
-        //    generated the gradient color from here https://cssgradient.io/
         background: "#090817",
         backgroundColor:
           "linear-gradient(169deg,rgba(9, 8, 23, 1) 0%, rgba(232, 231, 248, 1) 35%, rgba(26, 42, 128, 1) 100%)",
@@ -52,13 +50,13 @@ export const BentoGridItem = ({
       <div className="absolute inset-0 z-0 rounded-xl border border-transparent transition-all duration-300 group-hover:border-sky-400 group-hover:shadow-[0_0_25px_4px_rgba(56,189,248,0.4)] pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 h-full flex flex-col">
         {header}
         {icon && <div className="mb-2">{icon}</div>}
-        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200">
+        <div className="font-sans font-bold text-xl mb-3 text-neutral-600 dark:text-neutral-200">
           {title}
         </div>
-        <div className="font-sans text-lg font-normal text-neutral-600 dark:text-neutral-300">
+        <div className="font-sans text-sm leading-relaxed font-normal text-neutral-600 dark:text-neutral-300 flex-grow">
           {description}
         </div>
       </div>
