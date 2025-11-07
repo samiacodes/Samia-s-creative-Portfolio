@@ -112,37 +112,45 @@ export const techSkills = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "TechLight – Team Project",
+    des: "Modern e-commerce app for gadgets with AI Chatbot, Voice Search, Live Chat & Notifications, SSLCommerz payments.",
+    img: "/assets/projects/techlight.mp4",
+    iconLists: ["/react.svg", "/node.svg", "/express.svg", "/mongodb.svg", "/tail.svg", "/socket.svg", "/ssl.svg", "/groq.svg"],
+    linkLive: "https://tech-light-client.vercel.app/",
+    linkGitHub: "https://github.com/mdalamin2002/TechLight_client",
+    role: "Full-Stack Developer | Live | Client | Server",
+    tech: "React.js, Node.js, Express.js, MongoDB, Tailwind, Socket.io, SSLCommerz, Groq API",
+    achievements: "Built AI Chatbot; added Voice Search & Route Redirect; developed Live Chat & Notification System; integrated SSLCommerz; collaborated on full-stack deployment.",
+    keySkills: "Full-Stack Dev, Real-Time Communication, Payment Integration, AI Chatbot"
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "UrbanVilla – Building Management System",
+    des: "App for managing apartments, members, and rent with role-based access (JWT & Firebase Auth), Stripe payments, scalable API, audit logging.",
+    img: "/assets/projects/urbanvilla.mp4",
+    iconLists: ["/react.svg", "/tail.svg", "/react-query.svg", "/axios.svg", "/node.svg", "/express.svg", "/mongodb.svg", "/jwt.svg", "/stripe.svg", "/firebase.svg"],
+    linkLive: "https://urban-villlage-c50c6.web.app/",
+    linkGitHub: "https://github.com/samiacodes/Urban-Villa-Client",
+    role: "Full-Stack Developer | Live | Client | Server",
+    tech: "React, Tailwind, React Query, Axios, Node.js, Express.js, MongoDB, JWT, Stripe, Firebase",
+    achievements: "Implemented authentication & role control; integrated Stripe payments & automated member demotion; built scalable API; managed GitHub repos.",
+    keySkills: "Full-Stack Dev, Authentication, Payment Integration, API Security"
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
+    title: "BookNest – Modern Library",
+    des: "Digital library with category search, book borrowing/reviews, JWT auth, admin controls, React Query optimizations.",
+    img: "/assets/projects/booknest.mp4",
+    iconLists: ["/react.svg", "/vite.svg", "/tail.svg", "/react-router.svg", "/react-query.svg", "/node.svg", "/express.svg", "/mongodb.svg", "/jwt.svg"],
+    linkLive: "https://book-nest-202517.web.app",
+    linkGitHub: "https://github.com/samiacodes/BookBug-client",
+    role: "Full-Stack Developer | Live | Client | Server",
+    tech: "React, Vite, Tailwind, React Router, React Query, Node.js, Express.js, MongoDB, JWT",
+    achievements: "Developed search & review features; implemented auth & admin controls; optimized UI; structured client/server repos.",
+    keySkills: "Frontend Optimization, REST APIs, Authentication, UI/UX"
+  }
 ];
+
 
 export const testimonials = [
   {

@@ -1,7 +1,5 @@
 "use client";
-import type { ElementType, ComponentPropsWithRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
-
 import React, {
   createContext,
   useState,
@@ -49,7 +47,7 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          "py-20 flex items-center justify-center",
+          "py-10 flex items-center justify-center",
           containerClassName
         )}
         style={{
@@ -86,7 +84,7 @@ export const CardBody = ({
   return (
     <div
       className={cn(
-        "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "h-auto w-full [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
         className
       )}
     >
@@ -95,21 +93,7 @@ export const CardBody = ({
   );
 };
 
-
-type CardItemProps<T extends ElementType> = {
-  as?: T;
-  children: ReactNode;
-  className?: string;
-  translateX?: number | string;
-  translateY?: number | string;
-  translateZ?: number | string;
-  rotateX?: number | string;
-  rotateY?: number | string;
-  rotateZ?: number | string;
-} & Omit<ComponentPropsWithRef<T>, "as" | "children" | "className">;
-
-export const CardItem = <T extends ElementType = "div">({
-  as,
+export const CardItem = ({
   children,
   className,
   translateX = 0,
@@ -119,11 +103,18 @@ export const CardItem = <T extends ElementType = "div">({
   rotateY = 0,
   rotateZ = 0,
   ...rest
-}: CardItemProps<T>) => {
-  const Tag = as || "div";
-  const ref = useRef<HTMLDivElement | null>(null);
-
-
+}: {
+  children: React.ReactNode;
+  className?: string;
+  translateX?: number | string;
+  translateY?: number | string;
+  translateZ?: number | string;
+  rotateX?: number | string;
+  rotateY?: number | string;
+  rotateZ?: number | string;
+  [key: string]: any;
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
   useEffect(() => {
@@ -143,21 +134,16 @@ export const CardItem = <T extends ElementType = "div">({
     rotateZ,
   ]);
 
-
-  
-
   return (
-    <Tag
+    <div
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
       {...rest}
     >
       {children}
-    </Tag>
+    </div>
   );
 };
-
-
 
 // Create a hook to use the context
 export const useMouseEnter = () => {
