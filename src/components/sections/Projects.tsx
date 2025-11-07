@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects as projectData } from "@/data";
 import { FiX, FiExternalLink, FiGithub } from "react-icons/fi";
@@ -104,10 +105,12 @@ const Projects = () => {
                       playsInline
                     />
                   ) : (
-                    <img 
+                    <Image 
                       src={selectedProject.img} 
                       alt={selectedProject.title} 
                       className="w-full h-full object-cover"
+                      width={800}
+                      height={600}
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-transparent to-transparent" />

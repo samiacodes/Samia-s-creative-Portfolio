@@ -1,10 +1,4 @@
-import Hero from '@/components/Hero';
 import './globals.css';
-import Grid from '@/components/Grid';
-import { FloatingNav } from '@/components/ui/floating-navbar';
-import { navItems } from '@/data';
-import RecentProjects from '@/components/RecentProjects';
-import Footer from '@/components/Footer';
 import App from '@/src/App';
 
 export default function Home() {

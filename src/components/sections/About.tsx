@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -32,10 +33,12 @@ const About = () => {
           >
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500/20">
-                <img 
+                <Image 
                   src="/profile.png" 
                   alt="Samia Islam Lamia" 
                   className="w-full h-full object-cover"
+                  width={320}
+                  height={320}
                 />
               </div>
               <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-purple-600 rounded-full border-4 border-gray-900"></div>
