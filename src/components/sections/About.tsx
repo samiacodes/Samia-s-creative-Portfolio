@@ -52,19 +52,19 @@ const About = () => {
             <h3 className="text-2xl font-semibold text-white mb-4">
               Who I Am
             </h3>
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              I'm a passionate Full Stack Web Developer based in Dhaka, Bangladesh. 
-              I specialize in building responsive and intuitive web applications using 
-              modern technologies like React, Node.js, and MongoDB.
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+              I&#39;m a passionate full-stack developer with expertise in the MERN stack.
+              I love creating responsive, user-friendly web applications that solve
+              real-world problems.
             </p>
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              My journey in web development started during the COVID lockdown, and 
-              since then I've been continuously learning and improving my skills. 
-              I believe in writing clean, maintainable code and following best practices.
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed mt-4">
+              My journey in web development started 2 years ago, and since then
+              I&#39;ve worked on various projects ranging from simple websites to
+              complex web applications.
             </p>
-            <p className="text-gray-300 leading-relaxed">
-              When I'm not coding, you can find me reading books, crafting, or enjoying 
-              nature. These hobbies keep me grounded and bring balance to my everyday life.
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed mt-4">
+              When I&#39;m not coding, you can find me exploring new technologies,
+              contributing to open-source projects, or enjoying a good book.
             </p>
           </motion.div>
         </div>

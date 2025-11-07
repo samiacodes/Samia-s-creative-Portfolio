@@ -12,13 +12,14 @@ import {
 import { RiSendPlaneFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [activeInput, setActiveInput] = useState<string | null>(null);
-  const [copied, setCopied] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Initialize EmailJS with your public key
@@ -27,6 +28,7 @@ const Contact = () => {
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
 
     if (!form.current) return;
 
@@ -47,24 +49,29 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "dQcUnRgakVGu-be3D"
       )
       .then(
-        (result) => {
-          setIsSubmitted(true);
+        () => {
+          setLoading(false);
+          setSuccess(true);
           if (form.current) {
             form.current.reset();
           }
-          setTimeout(() => setIsSubmitted(false), 3000);
+          setTimeout(() => setSuccess(false), 3000);
         },
         (error) => {
+          setLoading(false);
           console.error("EmailJS Error:", error);
           alert(`Failed to send message: ${error.text || "Unknown error"}`);
         }
       );
   };
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText("samiyaislamlamia@gmail.com");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('samiacodes2002@gmail.com');
+    toast.success('Email copied to clipboard!');
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/8801777272323', '_blank');
   };
 
   const containerVariants = {
@@ -90,29 +97,26 @@ const Contact = () => {
   };
 
   return (
-    <section
+    <section 
       id="contact"
-      className="py-16 bg-gray-950 relative overflow-hidden min-h-screen"
+      className="py-20 bg-gray-950 relative"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10 mt-20">
+      <div className="absolute inset-0 bg-dot-white/[0.1]"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-[0_0_2px_rgba(255,255,255,0.2)]">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Get in Touch
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-400 to-cyan-400 mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+          <div className="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+          <p className="text-gray-400 mb-8 max-w-md mx-auto">
+            Feel free to reach out to me through any of the following channels.
+            I&#39;ll get back to you as soon as possible!
           </p>
         </motion.div>
 
@@ -131,13 +135,13 @@ const Contact = () => {
                 </span>
               </h3>
 
-              {isSubmitted && (
+              {success && (
                 <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 border border-purple-700/50 text-cyan-100 px-4 py-3 rounded mb-6"
                 >
-                  <p>Message sent successfully! I'll get back to you soon.</p>
+                  <p>Message sent successfully! I&#39;ll get back to you soon.</p>
                 </motion.div>
               )}
 
@@ -231,19 +235,20 @@ const Contact = () => {
 
                 <motion.button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center shadow hover:shadow-purple-500/20"
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.99 }}
-                  onHoverStart={() => setIsHovered(true)}
-                  onHoverEnd={() => setIsHovered(false)}
+                  disabled={loading}
+                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center shadow hover:shadow-purple-500/20 disabled:opacity-50"
+                  whileHover={{ scale: loading ? 1 : 1.01 }}
+                  whileTap={{ scale: loading ? 1 : 0.99 }}
+                  onHoverStart={() => !loading && setIsHovered(true)}
+                  onHoverEnd={() => !loading && setIsHovered(false)}
                 >
                   <motion.span
                     animate={{ x: isHovered ? 3 : 0 }}
                     transition={{ type: "spring", stiffness: 500 }}
                     className="flex items-center"
                   >
-                    Send Message
-                    <RiSendPlaneFill className="ml-2" />
+                    {loading ? "Sending..." : "Send Message"}
+                    {!loading && <RiSendPlaneFill className="ml-2" />}
                   </motion.span>
                 </motion.button>
               </form>
@@ -271,17 +276,12 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-gray-300 mb-1">Email</h4>
                     <button
-                      onClick={copyEmail}
+                      onClick={handleCopyEmail}
                       className="flex items-center text-gray-200 hover:text-white cursor-pointer"
                     >
-                      <span>samiyaislamlamia@gmail.com</span>
+                      <span>samiacodes2002@gmail.com</span>
                       <FaEnvelope className="ml-2 text-sm" />
                     </button>
-                    {copied && (
-                      <span className="text-xs text-green-400 ml-2">
-                        Copied!
-                      </span>
-                    )}
                   </div>
                 </motion.div>
 
@@ -295,14 +295,12 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-300 mb-1">WhatsApp</h4>
-                    <a
-                      href="https://wa.me/8801640475800"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-200 hover:text-white"
+                    <button
+                      onClick={handleWhatsAppClick}
+                      className="text-gray-200 hover:text-white cursor-pointer"
                     >
-                      +880 1640-475800
-                    </a>
+                      +880 1777-272323
+                    </button>
                   </div>
                 </motion.div>
 
