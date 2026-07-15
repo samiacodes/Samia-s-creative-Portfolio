@@ -7,7 +7,6 @@ import {
   FaGithub,
   FaLinkedin,
   FaTwitter,
-  FaInstagram,
 } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { motion } from "framer-motion";
@@ -344,18 +343,6 @@ const Contact = () => {
                       title="Twitter"
                     >
                       <FaTwitter className="text-xl text-white" />
-                    </motion.a>
-                    
-                    <motion.a
-                      href="https://www.instagram.com/emili_yalamia"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-gray-800 hover:bg-pink-500 p-3 rounded-lg transition-all flex items-center justify-center"
-                      whileHover={{ y: -2, scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      title="Instagram"
-                    >
-                      <FaInstagram className="text-xl text-white" />
                     </motion.a>
                   </div>
                 </div>

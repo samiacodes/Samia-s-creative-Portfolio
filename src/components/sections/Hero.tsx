@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { WaterScene } from "../three/WaterScene";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -35,8 +35,6 @@ const Hero = () => {
     { icon: <FaGithub className="text-3xl" />, url: "https://github.com/samiacodes" },
     { icon: <FaLinkedin className="text-3xl" />, url: "https://linkedin.com/in/samiyalamiya" },
     { icon: <FaTwitter className="text-3xl" />, url: "https://x.com/LamiyaEmi" },
-    { icon: <FaInstagram className="text-3xl" />, url: "https://www.instagram.com/emili_yalamia" },
-    { icon: <FaYoutube className="text-3xl" />, url: "https://www.youtube.com/@LamiyaEmi" }, 
   ];
 
   return (
